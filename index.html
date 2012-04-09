@@ -1,0 +1,137 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+
+<head>
+  <meta charset="utf-8" />
+
+  <!-- Always force latest IE rendering engine (even in intranet) & Chrome Frame 
+       Remove this if you use the .htaccess -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+
+  <title>Intellisense App Server</title>
+  <!--Add jQuery library-->
+  <script type ="text/javascript"> src= "https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" ></script>
+ 
+ <!--Add mousewheel plugin-->
+ <script type="text/javascript" src="/fancybox/lib//jquery.mousewheel-3.0.6.pack.js"></script>
+ <!--add FancyBox-->
+ <link rel="stylesheet" href="/fancybox/source/jquery.fancybox.css?v=2.0.5" type="text/css" media="screen" />
+ <script type= "text/javascript"> src="/fancybox/source/jquery.fancybox.pack.js?v=2.0.5"></script>
+ <!--Add button and thumnbnail helpers-->
+ <link rel="stylesheet" href="/fancybox/source/helpers/jquery.fancybox-buttons.css?v=2.0.5" type="text/css" media="screen" />
+<script type="text/javascript" src="/fancybox/source/helpers/jquery.fancybox-buttons.js?v=2.0.5"></script>
+ 
+ 
+
+</head> 
+
+<body>
+<ul class="list">
+	<li>
+		<a class="various fancybox.ajax" href="/demo/ajax.php">Ajax</a>
+	</li>
+	<li>
+		<a class="various fancybox.iframe" href="http://jquery.com/">Iframe</a>
+	</li>
+	<li>
+		<a class="various" href="#inline">Inline</a>
+	</li>
+	<li>
+		<a class="various" href="http://www.adobe.com/jp/events/cs3_web_edition_tour/swfs/perform.swf">SWF</a>
+	</li>
+	
+	<!--Jellyfish image to be loaded on textbook page-->
+		Here's an image:
+   <div style="float:right;width:50%;margin:0;padding:0;">
+   	<!--open video with jellyfish image as a poster in fancybox modal-->
+<a class=" various fancybox.iframe"	rel= "videogroup1" href="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" alt="image"/> 
+	<img src="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg"   alt="image"/> 
+  <video width="800" height="800"
+  <a class="various fancybox.iframe" rel="videogroup1" href="http://mmsdemo2.llnw.net/o1/reach/source-videos/lldemo2/atlantis.mov" poster="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" autobuffer controls/>
+  </video>
+   <!--todo: determine audio file formats to be used
+   <audio controls autoplay >
+             <class="various fancybook" rel= "videogroup1" source src="http://Domain.com/path/MyAudio.m4a" </source>    
+   </audio> -->
+<!--script>
+<script type="text/javascript">	
+	/*inline content*/
+/*<a id="inline" href="#data">This shows content of element who has id="data"></a>
+    <div style="display:none"><div id="data">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div></div>
+        /*Iframe*/
+ /*    <a href="http://www.example?iframe">This goes to iframe</a>
+   /*or*/
+ /* <a id=a class="iframe" href="http://www.example">This goes to iframe</a>
+    /*Ajax*/
+  /* <a href="http://www.example/data.php">This takes content using ajax</a> */
+  
+</script> -->
+</div>
+<div style="clear:both"></div>
+    
+      <!--<a href="images/fullsize/jellyfish_cropped.jpg" rel= group1 class="fancybox" title="jellyfish"> </a>*/
+        <a href="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" rel+group1 class= "fancybox" >
+            	<img src= "http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" alt="Jellyfish Image" width="300px" height="300px"/>
+            <a href="http://mmsdemo2.llnw.net/o1/reach/source-videos/lldemo2/atlantis.mov" rel="fancybox/></a>  
+            <img src="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" alt="Jellyfish Image>"/></a>
+            	      
+            	       
+   <!--  <a href="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" rel="fancybox title="This is the description"><img src="http://d2gk67vhg5dnwa.cloudfront.net/image/jellyfish.jpg" rel= "prettyPhoto"" width="60" height="60" alt="This is the title" /></a> -->  
+    <footer>
+   </footer>
+  </div> <!--End of Content-->
+  <script>
+  $(document).ready(function(){
+  <!--/** LAUNCH FANCYBOX**/ 
+     /TO DO:  Move JS to separate folder-->
+
+<script type="text/javascript">
+$(document).ready(function(){
+$(".various").fancybox({  (<!--Allows fancyBox to load into modal: iframe, ajax, swf, inline content-->
+		maxWidth	: 800,
+		maxHeight	: 600,
+		fitToView	: true,
+		width		: '70%',
+		height		: '70%',
+		autoSize	: true,
+		fittoView   : true,
+		closeClick	: false,
+		nextClick   : true,
+		mouseWheel  : true,
+		arrows		: true,
+		closeBtn	: true,
+		modal       : true,
+		OverlayShow : true,
+		OverlayColor: #666
+		OverlayOpacity: 0.5,
+		openEffect	: 'none',
+		closeEffect	: 'none'
+});
+
+</script>
+
+/**Fetch data via Activity ID API using Ajax, display response
+
+$.ajax({
+  url: "test.html",
+  context: document.body
+}).done(function() { 
+  $(this).addClass("done");
+});
+	$.fancybox.showActivity();
+
+	$.ajax({
+		type		: "GET",
+		cache	: false,
+		url		: "/data/login.php",
+		data		: $(this).serializeArray(),
+		success: function(data) {
+			$.fancybox(data);
+		}
+	});
+
+	return false;
+	
+});  */
+</script>
+</body>
+</html>
